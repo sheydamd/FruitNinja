@@ -6,6 +6,8 @@ public class Blade : MonoBehaviour
     private bool slicing;
     private Camera mainCamera;
     public float minSliceVelocity=0.01f;
+    public  AudioClip bladeSound;
+    private AudioSource audioSource;
     public Vector3 direction{get; private set;}
     private  TrailRenderer bladeTrail;
     public float sliceForce=5f;
@@ -13,6 +15,9 @@ public class Blade : MonoBehaviour
         mainCamera=Camera.main;
         bladeCollider=GetComponent<Collider>();
         bladeTrail=GetComponentInChildren<TrailRenderer>();
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip=bladeSound;
+        audioSource.playOnAwake=false;
     }
     private void OnEnable(){
         StopSlicing();
@@ -40,6 +45,7 @@ public class Blade : MonoBehaviour
         slicing=true;
         bladeCollider.enabled=true;
         bladeTrail.enabled=true;
+        audioSource.Play();
         bladeTrail.Clear();
     }
     private void StopSlicing(){

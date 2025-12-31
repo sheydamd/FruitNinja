@@ -1,72 +1,26 @@
-# Fruit Spawner (Unity C# Script)
+# Fruit Ninja Game (Unity - C#)
 
-This project contains a Unity C# script that spawns and throws random fruit objects inside a defined 3D area over time.
-It is suitable for arcade-style games (e.g. Fruit Ninja–like mechanics), physics-based spawning, or general object spawning systems.
+Fruit Ninja is a fun and interactive fruit-slicing game developed in Unity using C#. Players swipe across the screen to slice flying fruits while avoiding bombs. This project demonstrates core Unity skills such as 2D game mechanics, animation, collision detection, scoring systems, and user input handling.
+Features
+Fruit Slicing: Slice various fruits that appear randomly.
+Scoring System: Points are awarded for each fruit sliced; combos increase your score.
+Multiple Fruit Types: Fruits differ in size and point value.
+Swipe Controls: Slice fruits using mouse, touch, or swipe input.
+Animations & Effects: Smooth slicing animations, particle effects, and sound effects enhance gameplay.
 
-## Overview
-The Spawner script:
+### How to Play
 
-- Randomly selects fruit prefabs
+Start the game and wait for fruits to appear on the screen.
+Slice fruits by dragging the mouse or swiping on a touchscreen.
+Try to achieve the highest score possible!
 
-- Spawns them inside a defined collider volume
+### Project Structure
+Assets/Scripts: Contains all C# scripts for game logic: Blade.cs,Fruit.cs,GameManager.cs,Spawner.cs
+Assets/Prefabs: Pre-configured fruit
+Assets/Scenes: Contains the main game scene.
+Assets/Audio
 
-- Applies an upward force to simulate throwing
-
-- Destroys spawned objects after a fixed lifetime
-
-- Uses coroutines for smooth timed spawning
-
-## Script Breakdown
-
-1. Spawn Area
-` [SerializeField] private Collider spawnArea;`
-
-2. Fruit Prefabs
-
-```c#
-public GameObject[] fruitPrefabs;
-```
-
-3. Spawn Timing
-```c#
-public float minSpawnDelay = 0.25f;
-public float maxSpawnDelay = 1f;
-```
-4. Throw Settings
-```c#
-public float minAngle = -15f;
-public float maxAngle = 15f;
-public float minForce = 18f;
-public float maxForce = 22f;
-```
-5. Lifetime
-```c#
-public float maxLifetime = 5f;
-```
-### How It Works
-
-When the object is enabled, the Spawn() coroutine starts
-A short initial delay is applied
-
-Each loop:
-
-A random fruit prefab is selected
-A random position inside the collider is calculated
-The fruit is instantiated with a random angle
-A physics force is applied upward
-The fruit is destroyed after maxLifetime
-The process repeats indefinitely
-
-### How to Use
-
-- Attach the Spawner script to a GameObject
-
-- Add a Collider (Box Collider recommended)
-
-- Assign fruit prefabs to fruitPrefabs
-
-- Make sure prefabs have a Rigidbody
-
-- Adjust spawn settings in the Inspector
-
-- Press Play
+### Models & Textures
+Fruits: 2D sprites representing different types of fruits (apple, watermelon, etc.) with individual slicing animations.
+Backgrounds & UI: High-quality textures for game background, menus, and score display.
+Optional 3D Models: If 3D fruits are used, they are low-poly models with applied textures for performance-friendly rendering

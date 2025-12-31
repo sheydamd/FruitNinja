@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: b606ced0e8807a84facc682e13bb5e7d, type: 2}
+    - target: {fileID: 4450395583616130084, guid: e248bc64e7df52c4f92a3294cc32ec0b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b606ced0e8807a84facc682e13bb5e7d, type: 2}
     - target: {fileID: 5438992301465881065, guid: e248bc64e7df52c4f92a3294cc32ec0b, type: 3}
       propertyPath: m_Name
       value: Lemon

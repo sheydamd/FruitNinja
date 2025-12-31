@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 9112a27d6a3768544bb6c5ac7dfe9ac6, type: 2}
+    - target: {fileID: 4450395583616130084, guid: e248bc64e7df52c4f92a3294cc32ec0b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 85133183326ae604fb46c8f05c5c39bb, type: 2}
     - target: {fileID: 5438992301465881065, guid: e248bc64e7df52c4f92a3294cc32ec0b, type: 3}
       propertyPath: m_Name
       value: Orange
